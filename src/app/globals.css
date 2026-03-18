@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 @import "tailwindcss";
 
 
@@ -19,4 +20,38 @@ body{
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
+}
+
+
+.share-tech{
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+/* MARQUEE ANIMATION */
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 80s linear infinite;
+  gap: 4rem;
+  font-weight: 900;
+}
+
+/* .marquee-wrapper {
+  overflow: hidden;
+  background: #e6371d;
+  padding: 16px 0;
+} */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

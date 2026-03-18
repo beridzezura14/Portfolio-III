@@ -17,9 +17,7 @@ export default function Menu() {
   const [contactOpen, setContactOpen] = useState(false);
 
   return (
-    <header className="relative z-50" >
-
-
+    <header className="z-50 fixed w-full" >
       {/* Navbar */}
       <nav className="bg-black text-white shadow">
 
@@ -173,15 +171,15 @@ export default function Menu() {
             <div className="flex flex-col gap-3 text-sm text-gray-300">
 
                 <div className="flex items-center gap-2">
-                <FaMapMarkerAlt /> Tbilisi, Georgia
+                <FaMapMarkerAlt />Tbilisi, Georgia
                 </div>
 
                 <div className="flex items-center gap-2">
-                <FaPhoneAlt /> +995 558 29 43 64
+                <FaPhoneAlt />+995 558 29 43 64
                 </div>
 
                 <div className="flex items-center gap-3">
-                <FaEnvelope /> zuraberidze12@gmail.ge
+                <FaEnvelope />zuraberidze12@gmail.ge
                 </div>
 
             </div>
@@ -237,15 +235,15 @@ export default function Menu() {
               <div className="flex flex-col gap-4 mt-8">
 
                 <div className="flex items-center gap-2">
-                  <FaMapMarkerAlt /> Tbilisi, Georgia
+                  <FaMapMarkerAlt />Tbilisi, Georgia
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <FaPhoneAlt /> +995 558 29 43 64
+                  <FaPhoneAlt />+995 558 29 43 64
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <FaEnvelope /> zuraberidze12@gmail.com
+                  <FaEnvelope />zuraberidze12@gmail.com
                 </div>
 
                 <div className="flex gap-3 mt-4">
