@@ -27,111 +27,106 @@ export default function About() {
         </p>
       </div>
 
-<div className="flex flex-col gap-12 py-14 bg-[#000000] text-[#FFFFFF]">
-  {projects.map((project, index) => (
-    <div
-      key={project.id}
-      className="group bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 xl:px-12 xl:py-16 transition-all duration-500 hover:border-[#e6371d]/20"
-    >
-      {/* layout */}
-      <div
-        className={`flex flex-col lg:flex-row items-center gap-16 ${
-          index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-        }`}
-      >
-        {/* --- სურათი --- */}
-        <div className="relative w-full lg:w-1/2 cursor-pointer">
-          
-          {/* glow */}
-          <div className="absolute inset-0 bg-[#e6371d]/15 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-          <div className="relative overflow-hidden rounded-3xl bg-white shadow-[0_15px_45px_rgba(0,0,0,0.6)]">
-            
-            {/* image */}
-            <img
-              src={project.img}
-              alt={project.name}
-              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-
-            {/* overlay (DESKTOP lg+) */}
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:flex absolute inset-0 items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500"
+      <div className="flex flex-col gap-12 py-14 bg-[#000000] text-[#FFFFFF]">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className="group bg-[#0a0a0a] border border-white/5 rounded-3xl px-6 py-10 xl:px-12 xl:py-16 transition-all duration-500 hover:border-[#e6371d]/20"
+          >
+            {/* layout */}
+            <div
+              className={`flex flex-col lg:flex-row items-center gap-10 xl:gap-16 ${
+                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+              }`}
             >
-              <div className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center text-white text-sm uppercase bg-[#e6371d] transition-all duration-500 scale-75 group-hover:scale-100">
-                View
+              {/* --- სურათი --- */}
+              <div className="relative w-full lg:w-1/2 cursor-pointer">
+                {/* glow */}
+                <div className="absolute inset-0 bg-[#e6371d]/15 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative overflow-hidden rounded-2xl  bg-white shadow-[0_15px_45px_rgba(0,0,0,0.6)]">
+                  {/* image */}
+                  <img
+                    src={project.img}
+                    alt={project.name}
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+
+                  {/* overlay (DESKTOP lg+) */}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden lg:flex absolute inset-0 items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500"
+                  >
+                    <div className="w-24 h-24 rounded-full border border-white/30 flex items-center justify-center text-white text-sm uppercase bg-[#e6371d] transition-all duration-500 scale-75 group-hover:scale-100">
+                      View
+                    </div>
+                  </a>
+                </div>
               </div>
-            </a>
-          </div>
-        </div>
 
-        {/* --- ტექსტი --- */}
-        <div className="flex flex-col gap-10 w-full lg:w-1/2">
-          
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter uppercase leading-tight">
-            {project.name}
-            <span className="block h-1.5 w-28 bg-[#e6371d] mt-2.5 rounded-full" />
-          </h2>
+              {/* --- ტექსტი --- */}
+              <div className="flex flex-col gap-6 w-full lg:w-1/2">
+                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter uppercase leading-tight">
+                  {project.name}
+                  <span className="block h-1.5 w-28 bg-[#e6371d] mt-2.5 rounded-full" />
+                </h2>
 
-          <div className="flex flex-wrap gap-x-6 gap-y-3">
-            {project.language.map((lang, idx) => (
-              <div key={idx} className="flex items-center gap-3">
-                <span className="block w-2.5 h-2.5 rounded-full bg-[#e6371d]" />
-                <span className="text-sm font-medium tracking-wide uppercase text-gray-200">
-                  {lang}
-                </span>
+                <div className="flex flex-wrap gap-x-6 gap-y-3">
+                  {project.language.map((lang, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <span className="block w-2.5 h-2.5 rounded-full bg-[#e6371d]" />
+                      <span className="text-sm font-medium tracking-wide uppercase text-gray-200">
+                        {lang}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+                  {project.shortDescription}
+                </p>
+
+                {/* --- ACTIONS --- */}
+                <div className="flex flex-wrap items-center gap-4">
+                  {/* MOBILE/TABLET VIEW BUTTON (< lg) */}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="lg:hidden inline-flex items-center justify-center px-6 py-3 bg-[#e6371d] text-white text-sm font-semibold rounded-xl transition hover:scale-105 active:scale-95"
+                  >
+                    View Project
+                  </a>
+
+                  {/* SOURCE BUTTON */}
+                  {project.source && (
+                    <a
+                      href={project.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-3 border border-white/10 text-white text-sm font-medium rounded-xl hover:border-[#e6371d]/40 hover:text-[#e6371d] transition"
+                    >
+                      {/* GitHub icon */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.85 10.91.57.1.78-.25.78-.55v-2.02c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.57.23 2.73.11 3.02.73.81 1.18 1.84 1.18 3.1 0 4.43-2.68 5.4-5.24 5.69.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55C20.71 21.38 24 17.08 24 12 24 5.65 18.85.5 12 .5z" />
+                      </svg>
+                      Source
+                    </a>
+                  )}
+                </div>
               </div>
-            ))}
+            </div>
           </div>
-
-          <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
-            {project.shortDescription}
-          </p>
-
-          {/* --- ACTIONS --- */}
-          <div className="flex flex-wrap items-center gap-4">
-            
-            {/* MOBILE/TABLET VIEW BUTTON (< lg) */}
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="lg:hidden inline-flex items-center justify-center px-6 py-3 bg-[#e6371d] text-white text-sm font-semibold rounded-xl transition hover:scale-105 active:scale-95"
-            >
-              View Project
-            </a>
-
-            {/* SOURCE BUTTON */}
-            {project.source && (
-              <a
-                href={project.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 border border-white/10 text-white text-sm font-medium rounded-xl hover:border-[#e6371d]/40 hover:text-[#e6371d] transition"
-              >
-                {/* GitHub icon */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.85 10.91.57.1.78-.25.78-.55v-2.02c-3.19.69-3.86-1.54-3.86-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.57.23 2.73.11 3.02.73.81 1.18 1.84 1.18 3.1 0 4.43-2.68 5.4-5.24 5.69.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55C20.71 21.38 24 17.08 24 12 24 5.65 18.85.5 12 .5z" />
-                </svg>
-                Source
-              </a>
-            )}
-          </div>
-
-        </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
     </section>
   );
 }
