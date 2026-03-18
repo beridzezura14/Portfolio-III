@@ -71,7 +71,7 @@ export default function Hero() {
 
 
         {/* background glow */}
-            <div className="absolute right-12 xl:right-1/3 top-1/3 rounded-[50%] w-100 h-100 2xl:w-175 2xl:w-175 xl:top-1/5 bg-[#ff4025] opacity-10 blur-[80px]"></div>
+            <div className="absolute right-12 xl:right-1/3 top-1/5 rounded-[50%] w-100 h-100 2xl:w-175 2xl:w-175 xl:top-1/5 bg-[#ff4025] opacity-10 blur-[80px]"></div>
 
             <div>
                 {/* <h2 className="text-white">asbkahs</h2> */}
