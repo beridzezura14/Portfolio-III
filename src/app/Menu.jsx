@@ -53,12 +53,6 @@ export default function Menu() {
             >
                 Contact
             </Link>
-            <Link
-              href="/blogs"
-              className="p-2.5 pr-10 text-[18px] hover:text-[#ff4025] transition"
-            >
-              Blogs
-            </Link>
 
             {/* Contact button */}
             <div className="flex items-center gap-3">
@@ -125,32 +119,25 @@ export default function Menu() {
             </Link>
 
             <Link
-                href="/about"
+                href="#about"
                 onClick={() => setMobileOpen(false)}
                 className="py-2 rounded hover:text-[#ff4025]"
             >
                 About
             </Link>
             <Link
-                href="/projects"
+                href="#project"
                 onClick={() => setMobileOpen(false)}
                 className="py-2 rounded hover:text-[#ff4025]"
             >
                 Projects
             </Link>
             <Link
-                href="/contact"
+                href="#contact"
                 onClick={() => setMobileOpen(false)}
                 className="py-2 rounded hover:text-[#ff4025]"
             >
                 Contact
-            </Link>
-            <Link
-                href="/blogs"
-                onClick={() => setMobileOpen(false)}
-                className="py-2 rounded hover:text-[#ff4025]"
-            >
-                Blogs
             </Link>
 
             <button className="border border-[#ff4025] text-[#ff4025] py-2 px-4 rounded w-full hover:bg-[#ff4025] hover:text-white transition">

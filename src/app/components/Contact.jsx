@@ -1,14 +1,15 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { FiPhone } from "react-icons/fi";
-import { FiSend } from "react-icons/fi";
+import { FiPhone, FiSend  } from "react-icons/fi";
+
 import emailjs from "@emailjs/browser";
 import {
   FaFacebookF,
   FaInstagram,
   FaGithub,
   FaLinkedinIn,
+  FaWhatsapp 
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -70,7 +71,7 @@ export default function Contact() {
 
   return (
     <section ref={contactSection} className="bg-[#111111] relative">
-      <div className="w-[90%] max-w-[1150px] mx-auto py-20 text-white">
+      <div className="w-[90%] max-w-[1150px] mx-auto py-20 xl:pt-20 xl:pb-2 text-white">
         {/* Header */}
         <div className="flex justify-between items-center border-b border-gray-600 pb-5 mb-8">
           <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] share-tech">
@@ -88,7 +89,7 @@ export default function Contact() {
             <span className="forum-regular text-[#ff4025]">Me</span>{" "}
           </h2>
         </div>
-        <div className="lg:flex align-start justify-start">
+        <div className="lg:flex align-start justify-start xl:my-30">
             <div className="mb-12 grid gap-5 lg:gap-0 border-b border-gray-600 pb-10 lg:w-1/2 lg:mb-0 lg:border-b-0 lg:border-r-2 lg:pr-6">
             <h3 className="text-[23px] xl:text-[27px] font-semibold mb-4 decoration-[#ff4025] underline decoration-3">
                 Feel free to get in touch with me. I am always open to discussing
@@ -124,9 +125,9 @@ export default function Contact() {
 
             {/* Contact Form */}
             <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="flex flex-col gap-6 rounded-2xl shadow-lg  lg:w-1/2 lg:ml-6"
+                ref={form}
+                onSubmit={sendEmail}
+                className="flex flex-col gap-6 rounded-2xl shadow-lg  lg:w-1/2 lg:ml-6"
             >
             <input
                 type="text"
@@ -190,7 +191,7 @@ export default function Contact() {
           onClick={sendWhatsApp}
           className="fixed bottom-8 right-8 z-50 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition"
         >
-          <FiPhone className="text-2xl" />
+          <FaWhatsapp className="text-4xl" />
         </button>
       )}
     </section>

@@ -52,12 +52,12 @@ export default function Hero() {
                         I create fast, modern and responsive websites using
                         React, Next.js and modern web technologies
                     </div> 
-                <button className="xl:hidden bg-[#ff4025] w-50 text-[18px] text-white px-7 py-3 rounded-[10px] hover:bg-[#e6371d] transition cursor-pointer">
+                <button  className="xl:hidden bg-[#ff4025] w-50 text-[18px] text-white px-7 py-3 rounded-[10px] hover:bg-[#e6371d] transition cursor-pointer">
                     Lets Talk
                 </button> 
                 </div>
                 <div className="absolute z-10 bottom-0 left-1/2 lg:-ml-13.5 transform -translate-x-1/2 lg:translate-x-0 mb-5 xl:relative xl:left-auto xl:transform-none xl:mb-0 flex flex-col items-center gap-3 cursor-pointer ">
-                    <h1 className="mb-4 text-gray-400 xl:rotate-90 xl:mb-18 hover:text-[#e6371d] xl:relative transition-0.5">SCROLL DOWN</h1>
+                    <a href="#project" className="mb-4 text-gray-400 xl:rotate-90 xl:mb-18 hover:text-[#e6371d] xl:relative transition-0.5">SCROLL DOWN</a>
                     <div className="relative arrow w-5 h-22.5"> 
                         <Image
                             src="/img/arr.png"

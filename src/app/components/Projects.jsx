@@ -9,7 +9,7 @@ export default function About() {
   const [visibleCount, setVisibleCount] = useState(4);
 
   return (
-    <section className="relative z-10 w-[90%] lg:w-[80%] max-w-[1150px] mx-auto mt-10 py-10">
+    <section id="project" className="relative z-10 w-[90%] lg:w-[80%] max-w-[1150px] mx-auto mt-10 py-10">
       
       {/* Header */}
       <div className="flex justify-between items-center border-b border-gray-600 pb-5 mb-8">
