@@ -60,7 +60,7 @@ export default function Hero() {
                     <h1 className="mb-4 text-gray-400 xl:rotate-90 xl:mb-18 hover:text-[#e6371d] xl:relative transition-0.5">SCROLL DOWN</h1>
                     <div className="relative arrow w-5 h-22.5"> 
                         <Image
-                            src="/img/arr.png" // public ფოლდერშია
+                            src="/img/arr.png"
                             alt="Example"
                             fill
                             className="object-cover"

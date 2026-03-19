@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Share+Tech&display=swap');
 @import "tailwindcss";
 
 
@@ -29,8 +29,24 @@ body{
   font-style: normal;
 }
 
+.google-sans-flex {
+  font-family: "Google Sans Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  /* font-style: normal; */
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "ROND" 0;
+}
 
-
+.forum-regular {
+  font-family: "Forum", serif;
+  font-weight: 100;
+  /* font-style: normal; */
+  font-style: italic;
+}
 
 /* MARQUEE ANIMATION */
 

@@ -106,4 +106,5 @@ export const portfolioList = [
     featured: false,
     year: 2023,
   },
+  
 ]
