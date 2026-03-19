@@ -12,7 +12,7 @@ export default function Hero() {
     return (
         <section
             id="hero"
-            className="h-[90dvh] pl-8 pr-8 bg-black text-white flex"
+            className="h-[90vh] pl-8 pr-8 bg-black text-white flex"
         >
             <div className="xl:w-full flex gap-4 items-center justify-between ">
                 <div className="hidden xl:flex flex-col gap-5 text-2xl">
@@ -44,7 +44,7 @@ export default function Hero() {
                         <FaLinkedinIn />
                     </a>
                 </div>
-                <div className="h-[65dvh] mb-[15vh] xl:mb-0 xl:w-250 2xl:w-280 flex flex-col item-center justify-center gap-5">
+                <div className="h-[65vh] mb-[15vh] xl:mb-0 xl:w-250 2xl:w-280 flex flex-col item-center justify-center gap-5">
                     <div className="gravitas relative text-5xl md:text-7xl font-bold mt-5 xl:text-9xl">
                         Hi, Im <span className="text-[#ff4025]">ZURA </span> Web Developer  
                     </div>
