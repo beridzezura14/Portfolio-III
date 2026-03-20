@@ -44,8 +44,8 @@ export default function Hero() {
                         <FaLinkedinIn />
                     </a>
                 </div>
-                <div className="h-[65vh] mb-[15vh] xl:mb-0 xl:w-250 2xl:w-280 flex flex-col item-center justify-center gap-5">
-                    <div className="gravitas relative text-5xl md:text-7xl font-bold mt-5 xl:text-9xl">
+                <div className="h-[65vh] mb-[18vh] xl:mb-0 xl:w-250 2xl:w-280 flex flex-col item-center justify-center gap-5">
+                    <div className="gravitas relative text-4xl md:text-7xl font-bold mt-5 xl:text-9xl">
                         Hi, Im <span className="text-[#ff4025]">ZURA </span> Web Developer  
                     </div>
                     <div className="text-1.5xl md:text-2xl  mt-3 text-gray-400 xl:w-150">
