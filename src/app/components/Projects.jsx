@@ -13,17 +13,17 @@ export default function About() {
       
       {/* Header */}
       <div className="flex justify-between items-center border-b border-gray-600 pb-5 mb-8">
-        <h3 className="uppercase text-sm tracking-widest text-[18px] share-tech">
+        <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
           [WHAT I DO]
         </h3>
-        <h3 className="uppercase text-sm tracking-widest text-[18px] share-tech">
+        <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
           [VIEW ALL PROJECTS]
         </h3>
       </div>
 
       {/* Paragraph */}
       <div className="pt-2 mb-10">
-        <p className="share-tech text-justify text-[18px] md:text-2xl xl:text-4xl text-gray-200">
+        <p className="forum-regular text-justify text-[18px] md:text-2xl xl:text-4xl text-gray-200">
           <span className="pl-10 md:pl-16 xl:pl-32">I</span> build responsive
           and interactive websites using modern front-end frameworks like React.js,
           Next.js, and Tailwind CSS. I also develop full-stack applications with
@@ -143,7 +143,7 @@ export default function About() {
           <div className="flex justify-center mt-6">
             <button
               onClick={() => setVisibleCount((prev) => prev + 4)}
-              className="px-6 py-3 bg-[#e6371d] text-white text-sm font-semibold rounded-xl transition hover:scale-105 active:scale-95"
+              className="text-white text-sm p-2 border-b border-[#e6371d] transition hover:scale-105 active:scale-95 cursor-pointer"
             >
               Show More
             </button>

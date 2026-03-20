@@ -82,18 +82,18 @@ export default function About() {
         <div className="bg-[#1a1a1a] mt-10 py-10">
           {/* Header */}
           <div className="flex justify-between border-b border-gray-600 pb-5">
-            <h3 className="uppercase text-sm tracking-widest text-[18px] share-tech">
+            <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
               [About Me]
             </h3>
-            <h3 className="uppercase text-sm tracking-widest text-[18px] share-tech">
+            <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
               [Explore Me]
             </h3>
           </div>
 
           {/* Text */}
-          <div className="pt-6">
-            <p className="share-tech text-justify text-[18px] md:text-2xl xl:text-4xl ">
-              <span className="pl-10 md:pl-16 xl:pl-32">I</span> am Zura, a Web developer from Georgia. I make websites that look nice, work well, and are easy for people to use. I try to keep web experiences simple, clear, and attractive. My goal is to build websites that are useful and enjoyable for everyone who visits them.
+          <div className="pt-6 xl:pt-10">
+            <p className="text-justify text-[18px] md:text-2xl xl:text-4xl forum-regular">
+              <span className="pl-10 md:pl-16 xl:pl-32 ">I</span> am Zura, a Web developer from Georgia. I make websites that look nice, work well, and are easy for people to use. I try to keep web experiences simple, clear, and attractive. My goal is to build websites that are useful and enjoyable for everyone who visits them.
             </p>
           </div>
 

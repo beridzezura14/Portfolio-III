@@ -74,10 +74,10 @@ export default function Contact() {
       <div className="w-[90%] max-w-[1150px] mx-auto py-20 xl:pt-20 xl:pb-2 text-white">
         {/* Header */}
         <div className="flex justify-between items-center border-b border-gray-600 pb-5 mb-8">
-          <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] share-tech">
+          <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
             [Contact]
           </h3>
-          <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] share-tech">
+          <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
             [Send me message]
           </h3>
         </div>
