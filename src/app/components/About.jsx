@@ -37,7 +37,7 @@ const personalInfo = [
 
 export default function About() {
   return (
-    <section id="about" className="relative pt-10 2xl:pt-10">
+    <section id="about" className="relative pt-10 xl:pt-20">
       {/* Background split */}
       <div className="absolute top-0 left-0 w-full h-1/4 xl:h-1/2 bg-black"></div>
       <div className="absolute bottom-0 left-0 w-full h-5/6 xl:h-2/3 bg-[#1a1a1a]"></div>
