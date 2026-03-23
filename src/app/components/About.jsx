@@ -1,5 +1,12 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { SiNextdotjs, SiTailwindcss, SiSupabase } from "react-icons/si";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hotspot = ({ top, left, label, percentage, icon: Icon }) => (
   <div
@@ -36,6 +43,45 @@ const personalInfo = [
 ];
 
 export default function About() {
+  const photoRef = useRef(null);
+  const textRef = useRef(null);
+  useEffect(() => {
+    gsap.fromTo(
+      photoRef.current,
+      {
+        // y: 150,
+        opacity: 0,
+      },
+      {
+        // y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: photoRef.current,
+          start: "top 80%",
+        },
+      },
+    );
+    gsap.fromTo(
+      textRef.current,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        stager: 1,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+        },
+      },
+    );
+
+  }, []); // Empty dependency array to run only once on mount
+
   return (
     <section id="about" className="relative pt-10 xl:pt-20">
       {/* Background split */}
@@ -45,7 +91,10 @@ export default function About() {
       {/* MAIN CONTAINER */}
       <div className="relative z-10 w-[90%] lg:w-[80%] max-w-287.5 mx-auto">
         {/* IMAGE */}
-        <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+        <div
+          ref={photoRef}
+          className="relative w-full aspect-video rounded-xl overflow-hidden"
+        >
           <Image
             src="/img/me.jpeg"
             alt="my-img"
@@ -82,18 +131,22 @@ export default function About() {
         <div className="bg-[#1a1a1a] mt-10 py-10">
           {/* Header */}
           <div className="flex justify-between border-b border-gray-600 pb-5">
-            <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
+            <h3 ef={textRef}  className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
               [About Me]
             </h3>
-            <h3 className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
+            <h3 ef={textRef}  className="uppercase text-[14px] tracking-widest lg:text-[18px] play-regular">
               [Explore Me]
             </h3>
           </div>
 
           {/* Text */}
           <div className="pt-6 xl:pt-10">
-            <p className="text-justify text-[18px] md:text-2xl xl:text-4xl forum-regular">
-              <span className="pl-10 md:pl-16 xl:pl-32 ">I</span> am Zura, a Web developer from Georgia. I make websites that look nice, work well, and are easy for people to use. I try to keep web experiences simple, clear, and attractive. My goal is to build websites that are useful and enjoyable for everyone who visits them.
+            <p ref={textRef} className="text-justify text-[18px] md:text-2xl xl:text-4xl forum-regular">
+              <span className="pl-10 md:pl-16 xl:pl-32 ">I</span> am Zura, a Web
+              developer from Georgia. I make websites that look nice, work well,
+              and are easy for people to use. I try to keep web experiences
+              simple, clear, and attractive. My goal is to build websites that
+              are useful and enjoyable for everyone who visits them.
             </p>
           </div>
 
@@ -113,15 +166,58 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="relative overflow-hidden  bg-[#e6371d] mt-10">       
+      <div className="relative overflow-hidden  bg-[#e6371d] mt-10">
         {/* gradient edges */}
         {/* <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#e6371d] to-transparent z-10" />
         <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#e6371d] to-transparent z-10" /> */}
 
         <div className="flex w-max marquee gap-16">
           <span className="text-white uppercase text-2xl xl:text-5xl py-6 xl:py-8">
-            HTML <span className="px-10">&#8277;</span> CSS <span className="px-10">&#8277;</span> JavaScript <span className="px-10">&#8277;</span> React.js <span className="px-10">&#8277;</span> MERN Stack <span className="px-10">&#8277;</span> Next.js <span className="px-10">&#8277;</span> Supabase <span className="px-10">&#8277;</span> GSAP <span className="px-10">&#8277;</span> Tailwind CSS <span className="px-10">&#8277;</span> HTML <span className="px-10">&#8277;</span> CSS <span className="px-10">&#8277;</span> JavaScript <span className="px-10">&#8277;</span> React.js <span className="px-10">&#8277;</span> MERN Stack <span className="px-10">&#8277;</span> Next.js <span className="px-10">&#8277;</span> Supabase <span className="px-10">&#8277;</span> GSAP <span className="px-10">&#8277;</span> Tailwind CSS <span className="px-10">&#8277;</span> HTML <span className="px-10">&#8277;</span> CSS <span className="px-10">&#8277;</span> JavaScript <span className="px-10">&#8277;</span> React.js <span className="px-10">&#8277;</span> MERN Stack <span className="px-10">&#8277;</span> Next.js <span className="px-10">&#8277;</span> Supabase <span className="px-10">&#8277;</span> GSAP <span className="px-10">&#8277;</span> Tailwind CSS <span className="px-10">&#8277;</span> HTML <span className="px-10">&#8277;</span> CSS <span className="px-10">&#8277;</span> JavaScript <span className="px-10">&#8277;</span> React.js <span className="px-10">&#8277;</span> MERN Stack <span className="px-10">&#8277;</span> Next.js <span className="px-10">&#8277;</span> Supabase <span className="px-10">&#8277;</span> GSAP <span className="px-10">&#8277;</span> Tailwind CSS <span className="px-10">&#8277;</span> HTML <span className="px-10">&#8277;</span> CSS <span className="px-10">&#8277;</span> JavaScript <span className="px-10">&#8277;</span> React.js <span className="px-10">&#8277;</span> MERN Stack <span className="px-10">&#8277;</span> Next.js <span className="px-10">&#8277;</span> Supabase <span className="px-10">&#8277;</span> GSAP <span className="px-10">&#8277;</span> Tailwind CSS
-          </span>  
+            HTML <span className="px-10">&#8277;</span> CSS{" "}
+            <span className="px-10">&#8277;</span> JavaScript{" "}
+            <span className="px-10">&#8277;</span> React.js{" "}
+            <span className="px-10">&#8277;</span> MERN Stack{" "}
+            <span className="px-10">&#8277;</span> Next.js{" "}
+            <span className="px-10">&#8277;</span> Supabase{" "}
+            <span className="px-10">&#8277;</span> GSAP{" "}
+            <span className="px-10">&#8277;</span> Tailwind CSS{" "}
+            <span className="px-10">&#8277;</span> HTML{" "}
+            <span className="px-10">&#8277;</span> CSS{" "}
+            <span className="px-10">&#8277;</span> JavaScript{" "}
+            <span className="px-10">&#8277;</span> React.js{" "}
+            <span className="px-10">&#8277;</span> MERN Stack{" "}
+            <span className="px-10">&#8277;</span> Next.js{" "}
+            <span className="px-10">&#8277;</span> Supabase{" "}
+            <span className="px-10">&#8277;</span> GSAP{" "}
+            <span className="px-10">&#8277;</span> Tailwind CSS{" "}
+            <span className="px-10">&#8277;</span> HTML{" "}
+            <span className="px-10">&#8277;</span> CSS{" "}
+            <span className="px-10">&#8277;</span> JavaScript{" "}
+            <span className="px-10">&#8277;</span> React.js{" "}
+            <span className="px-10">&#8277;</span> MERN Stack{" "}
+            <span className="px-10">&#8277;</span> Next.js{" "}
+            <span className="px-10">&#8277;</span> Supabase{" "}
+            <span className="px-10">&#8277;</span> GSAP{" "}
+            <span className="px-10">&#8277;</span> Tailwind CSS{" "}
+            <span className="px-10">&#8277;</span> HTML{" "}
+            <span className="px-10">&#8277;</span> CSS{" "}
+            <span className="px-10">&#8277;</span> JavaScript{" "}
+            <span className="px-10">&#8277;</span> React.js{" "}
+            <span className="px-10">&#8277;</span> MERN Stack{" "}
+            <span className="px-10">&#8277;</span> Next.js{" "}
+            <span className="px-10">&#8277;</span> Supabase{" "}
+            <span className="px-10">&#8277;</span> GSAP{" "}
+            <span className="px-10">&#8277;</span> Tailwind CSS{" "}
+            <span className="px-10">&#8277;</span> HTML{" "}
+            <span className="px-10">&#8277;</span> CSS{" "}
+            <span className="px-10">&#8277;</span> JavaScript{" "}
+            <span className="px-10">&#8277;</span> React.js{" "}
+            <span className="px-10">&#8277;</span> MERN Stack{" "}
+            <span className="px-10">&#8277;</span> Next.js{" "}
+            <span className="px-10">&#8277;</span> Supabase{" "}
+            <span className="px-10">&#8277;</span> GSAP{" "}
+            <span className="px-10">&#8277;</span> Tailwind CSS
+          </span>
         </div>
       </div>
     </section>

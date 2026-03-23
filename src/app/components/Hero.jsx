@@ -34,13 +34,13 @@ export default function Hero() {
       .to(arrowRef.current, { y: 0, opacity: 1, duration: 0.8 }, "-=0.6");
 
     // Glow pulse separately
-    gsap.to(glowRef.current, {
-      opacity: 0.2,
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut",
-    });
+    // gsap.to(glowRef.current, {
+    //   opacity: 0.2,
+    //   duration: 2,
+    //   repeat: -1,
+    //   yoyo: true,
+    //   ease: "power1.inOut",
+    // });
   }, []);
 
   return (
@@ -101,7 +101,7 @@ export default function Hero() {
 
       {/* background glow */}
       <div
-        ref={glowRef}
+        // ref={glowRef}
         className="absolute right-12 xl:right-1/3 top-1/5 rounded-[50%] w-100 h-100 2xl:w-175 2xl:w-175 xl:top-1/5 bg-[#ff4025] opacity-10 blur-[80px]"
       />
     </section>

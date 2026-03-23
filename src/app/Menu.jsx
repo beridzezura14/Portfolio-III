@@ -62,7 +62,7 @@ export default function Menu() {
               </button>
 
               <button
-                className="flex flex-col justify-between w-12 h-11.5 cursor-pointer ml-2 bg-[#FFFFFF] py-3.5 px-3 rounded"
+                className="flex flex-col justify-between w-12 h-11.5 cursor-pointer ml-2 bg-[#ffffff] py-3.5 px-3 rounded"
                 onClick={() => setContactOpen(true)}
               >
                 <span className="block h-0.5 w-full bg-black rounded"></span>
